@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:layout_marginTop="5dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#1E576061"
+        android:foreground="@drawable/contactborder"
+        android:orientation="vertical" />
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cardCornerRadius="50dp"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_marginStart="10dp">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/contactImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/firstName"
+        android:layout_width="120dp"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/first_name"/>
+    <TextView
+        android:id="@+id/LastName"
+        android:layout_width="120dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginStart="120dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/last_name"/>
+    <TextView
+        android:id="@+id/contactNumber"
+        android:layout_width="120dp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/contact_number"/>
+
+            <Button
+
+                android:id="@+id/makeCallButton"
+                android:layout_gravity="center"
+                android:layout_marginStart="70dp"
+                android:foreground="@drawable/addcontact"
+                android:foregroundGravity="center"
+                android:foregroundTint="@color/white"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/callbutton"/>
+
+                <Button
+                    android:id="@+id/ViewProfile"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="120dp"
+                    android:foreground="@drawable/addcontactlist"
+                    android:foregroundGravity="center"
+                    android:foregroundTint="@color/white"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/callbutton"/>
+
+                <Button
+                    android:id="@+id/deleteContact"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="170dp"
+                    android:foreground="@drawable/delete_contact"
+                    android:foregroundGravity="center"
+                    android:foregroundTint="@color/white"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/callbutton"/>
+
+
+
+
+
+</androidx.cardview.widget.CardView>

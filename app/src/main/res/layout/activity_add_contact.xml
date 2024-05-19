@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityFunctions.AddContactActivity">
+
+    <LinearLayout
+        android:id="@+id/addcontacttitlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/add_contact_here"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/addcontactplusborder"
+        android:layout_below="@+id/addcontacttitlelayout">
+
+
+        <LinearLayout
+            android:id="@+id/imageViewLayout"
+            android:layout_width="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="200dp"
+            android:background="@drawable/contactborder">
+
+            <ImageView
+                android:id="@+id/addcontactimageview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/addContactImagerButton"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:foreground="@drawable/add_image"
+            android:foregroundGravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"/>
+        <Button
+            android:id="@+id/cameraOpenButton"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:foreground="@drawable/addcamera"
+            android:foregroundGravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp"/>
+
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/addContactImagerButton"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="-2dp"
+            android:layout_marginTop="61dp"
+            android:layout_marginEnd="2dp"
+            android:layout_toEndOf="@+id/imageViewLayout"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="@string/you_can_add_an_image_for_your_contact"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            tools:ignore="SmallSp" />
+
+        <EditText
+            android:id="@+id/firstNameEditText"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="12dp"
+            android:layout_marginBottom="15dp"
+            android:paddingEnd="12dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="15sp"
+            android:hint="@string/first_name"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="40dp"
+            android:background="@drawable/contactborder"
+            android:layout_below="@+id/imageViewLayout"
+            tools:ignore="RtlSymmetry" />
+
+
+        <EditText
+            android:id="@+id/lastNameEditText"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="15dp"
+            android:paddingStart="12dp"
+            android:hint="@string/last_name"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="15sp"
+            android:paddingEnd="12dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="40dp"
+            android:background="@drawable/contactborder"
+            android:layout_below="@+id/firstNameEditText"/>
+
+
+        <EditText
+            android:id="@+id/contactEditText"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="15sp"
+            android:paddingStart="12dp"
+            android:hint="@string/contact_number"
+            android:paddingEnd="12dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="40dp"
+            android:background="@drawable/contactborder"
+            android:layout_below="@+id/lastNameEditText"/>
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="15sp"
+            android:paddingStart="12dp"
+            android:hint="@string/e_mail_address"
+            android:paddingEnd="12dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="40dp"
+            android:background="@drawable/contactborder"
+            android:layout_below="@+id/contactEditText"/>
+
+
+
+        <EditText
+            android:id="@+id/addNotesEditText"
+            android:layout_width="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="15dp"
+            android:hint="@string/add_notes"
+            android:paddingStart="12dp"
+            android:paddingBottom="100dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="15sp"
+            android:paddingEnd="12dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="150dp"
+            android:background="@drawable/contactborder"
+            android:layout_below="@+id/emailEditText"/>
+
+
+
+
+
+            <Button
+                android:id="@+id/contactSaveButton"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="@string/save"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50dp"
+                android:layout_marginStart="40dp"/>
+            <Button
+                android:id="@+id/addContactBackButton"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_alignParentEnd="true"
+                android:text="@string/back"
+                android:textSize="18sp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginEnd="40dp"/>
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityFunctions.ContactListActivity">
+
+
+    <LinearLayout
+        android:id="@+id/callbooktitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/light_Blue"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/contackListBackButton"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/backarrow"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/callbook"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:paddingEnd="35dp"
+            android:fontFamily="@font/poppins_medium"
+            tools:ignore="RtlSymmetry" />
+
+    </LinearLayout>
+    <RelativeLayout
+
+        android:id="@+id/callbooksearch"
+        android:layout_below="@+id/callbooktitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingStart="10dp"
+        android:background="@color/light_Blue"
+        android:orientation="horizontal"
+        tools:ignore="RtlSymmetry">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/callBookSearchBar"
+            android:layout_width="300dp"
+            android:layout_marginStart="2dp"
+            android:background="@color/white"
+            android:layout_marginTop="5dp"
+            app:cardCornerRadius="10dp"
+            android:foreground="@drawable/searchbox"
+            android:layout_height="40dp">
+
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+
+        android:id="@+id/contackList"
+        android:layout_below="@+id/callbooksearch"
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:background="@drawable/backgroud_two"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contactsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/popupwindow"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="700dp"
+        android:background="@drawable/rectangleshape"
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                tools:ignore="RtlSymmetry">
+
+
+                <Button
+                android:id="@+id/dialContactButton"
+                android:layout_width="120dp"
+                android:foreground="@drawable/addcontact"
+                android:foregroundGravity="center"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/dark_Blue"/>
+
+                <Button
+                    android:id="@+id/addContactButton"
+                    android:layout_width="120dp"
+                    android:layout_marginStart="5dp"
+                    android:foreground="@drawable/addcontactlist"
+                    android:foregroundGravity="center"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/dark_Blue"/>
+                <Button
+                    android:id="@+id/viewAboutUsButton"
+                    android:layout_width="120dp"
+                    android:text="@string/about_us"
+                    android:layout_marginStart="5dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/dark_Blue"/>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

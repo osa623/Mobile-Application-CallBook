@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">CallBook</string>
+    <string name="get_started">Get Started</string>
+    <string name="get_started1">Get Started</string>
+    <string name="contact_list">Contact List</string>
+    <string name="callbook">CallBook</string>
+    <string name="add_contact">+ Add Contact</string>
+    <string name="dial">+ Dial</string>
+    <string name="add_call">+ Add Call</string>
+    <string name="about_us">About Us</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="add_contact_here">Add Contact Here</string>
+    <string name="you_can_add_an_image_for_your_contact">You can add an image for your contact</string>
+    <string name="add_notes">Add Notes</string>
+    <string name="save">Save</string>
+    <string name="back">Back</string>
+    <string name="powered_by">Powered By</string>
+    <string name="e_mail_address">E-mail Address</string>
+    <string name="search">Search</string>
+    <string name="update">Update</string>
+    <string name="edit">Edit</string>
+</resources>

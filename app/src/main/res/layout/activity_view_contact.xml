@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityFunctions.ViewContactActivity">
+
+    <LinearLayout
+        android:id="@+id/addcontacttitlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/add_contact_here"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/addcontactplusborder"
+        android:layout_below="@+id/addcontacttitlelayout">
+
+
+        <LinearLayout
+            android:id="@+id/imageViewLayout"
+            android:layout_width="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="100dp"
+            android:layout_height="200dp"
+            android:background="@drawable/contactborder">
+
+            <ImageView
+                android:id="@+id/addcontactimageview"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="match_parent" />
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/firstNameViewText"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="12dp"
+            android:layout_marginBottom="15dp"
+            android:paddingEnd="12dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="15sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="40dp"
+            android:background="@drawable/contactborder"
+            android:layout_below="@+id/imageViewLayout"
+            tools:ignore="RtlSymmetry" />
+
+
+        <TextView
+            android:id="@+id/lastNameViewText"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="15dp"
+            android:paddingStart="12dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="15sp"
+            android:paddingEnd="12dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="40dp"
+            android:background="@drawable/contactborder"
+            android:layout_below="@+id/firstNameViewText"/>
+
+
+        <TextView
+            android:id="@+id/contactViewText"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="15sp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="40dp"
+            android:background="@drawable/contactborder"
+            android:layout_below="@+id/lastNameViewText"/>
+
+        <TextView
+            android:id="@+id/emailViewText"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="15sp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="40dp"
+            android:background="@drawable/contactborder"
+            android:layout_below="@+id/contactViewText"/>
+
+
+
+        <EditText
+            android:id="@+id/addNotesViewText"
+            android:layout_width="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="15dp"
+            android:paddingStart="12dp"
+            android:paddingBottom="100dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="15sp"
+            android:paddingEnd="12dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="100dp"
+            android:background="@drawable/contactborder"
+            android:layout_below="@+id/emailViewText"/>
+
+
+
+
+
+        <Button
+            android:id="@+id/contactUpdateButton"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="@string/edit"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginStart="40dp"/>
+        <Button
+            android:id="@+id/addContactBackButton"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_alignParentEnd="true"
+            android:text="@string/back"
+            android:textSize="18sp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginEnd="40dp"/>
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
