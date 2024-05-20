@@ -30,10 +30,23 @@
         android:layout_below="@+id/addcontacttitlelayout">
 
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imageCardView"
+            android:layout_width="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="100dp"
+            app:cardCornerRadius="200dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="100dp"
+            android:layout_height="200dp">
+
         <LinearLayout
             android:id="@+id/imageViewLayout"
             android:layout_width="200dp"
             android:layout_marginTop="10dp"
+            android:layout_gravity="center"
             android:layout_alignParentStart="true"
             android:layout_marginStart="100dp"
             android:layout_marginBottom="10dp"
@@ -45,12 +58,13 @@
             <ImageView
                 android:id="@+id/addcontactimageview"
                 android:layout_width="match_parent"
-                android:layout_gravity="center"
-                android:layout_height="match_parent" />
-
-
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
 
         </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
 
 
         <TextView
@@ -67,7 +81,7 @@
             android:layout_marginEnd="10dp"
             android:layout_height="40dp"
             android:background="@drawable/contactborder"
-            android:layout_below="@+id/imageViewLayout"
+            android:layout_below="@+id/imageCardView"
             tools:ignore="RtlSymmetry" />
 
 
@@ -122,15 +136,16 @@
 
 
 
-        <EditText
-            android:id="@+id/addNotesViewText"
+        <TextView
+            android:id="@+id/notesViewText"
             android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginStart="10dp"
             android:layout_marginBottom="15dp"
-            android:paddingStart="12dp"
-            android:paddingBottom="100dp"
             android:fontFamily="@font/poppins_medium"
             android:textSize="15sp"
+            android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:layout_marginEnd="10dp"
             android:layout_height="100dp"

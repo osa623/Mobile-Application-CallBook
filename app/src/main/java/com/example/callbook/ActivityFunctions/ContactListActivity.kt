@@ -30,6 +30,7 @@ class ContactListActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         db = contactDatabaseHelper(this)
         contactsAdapter = contactsAdapter(db.getAllContacts(), this)
 

@@ -1,12 +1,15 @@
 package com.example.callbook.contactListDatabaseConfigs
 
+import com.example.callbook.ActivityFunctions.ViewContactActivity
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -20,6 +23,7 @@ class contactsAdapter(private var contacts: List<contacts>, private val context:
         val firstNameTextView: TextView = itemView.findViewById(R.id.firstName)
         val lastNameTextView: TextView = itemView.findViewById(R.id.LastName)
         val contactTextView: TextView = itemView.findViewById(R.id.contactNumber)
+        val profileView : Button = itemView.findViewById(R.id.ViewProfile)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): contactViewHolder {
@@ -35,11 +39,21 @@ class contactsAdapter(private var contacts: List<contacts>, private val context:
         holder.lastNameTextView.text = contact.lastName
         holder.contactTextView.text = contact.contactNumber.toString()
 
+        holder.profileView.setOnClickListener{
+            val intent = Intent(holder.itemView.context, ViewContactActivity::class.java).apply{
+                putExtra("contact_id", contacts[position].id) // Corrected accessing the ID of the contact
+            }
+            holder.itemView.context.startActivity(intent)
+        }
+
+
         // Convert ByteArray to Bitmap and set it to ImageView
         contact.image?.let {
             val bitmap = byteArrayToBitmap(it)
             holder.imageView.setImageBitmap(bitmap)
         }
+
+
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -51,4 +65,6 @@ class contactsAdapter(private var contacts: List<contacts>, private val context:
     private fun byteArrayToBitmap(byteArray: ByteArray): Bitmap {
         return BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
     }
+
+
 }

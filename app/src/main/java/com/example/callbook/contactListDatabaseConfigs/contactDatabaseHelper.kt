@@ -1,9 +1,11 @@
 package com.example.callbook.contactListDatabaseConfigs
 
+import android.content.ClipData.Item
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import java.net.IDN
 
 // This is the Database helper for this database
 class contactDatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
@@ -45,7 +47,7 @@ class contactDatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABAS
         onCreate(db)
     }
 
-    // Implementation of data inserting function to the database
+    //Implementation of data inserting function to the database
     fun insertContactDetails(contact: contacts) {
         val db = writableDatabase
         val values = ContentValues().apply {
@@ -84,5 +86,27 @@ class contactDatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABAS
         return contactsList
     }
 
+    // Fetch a contact by ID
+    fun getContactById(id: Int): contacts? {
+        val db = readableDatabase
+        val query = "SELECT * FROM $TABLE_NAME WHERE $COLUMN_ID = ?"
+        val cursor = db.rawQuery(query, arrayOf(id.toString()))
+
+        var contact: contacts? = null
+        while (cursor.moveToNext()) {
+            val id = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
+            val image = cursor.getBlob(cursor.getColumnIndexOrThrow(COLUMN_IMAGE))
+            val firstName = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_FIRSTNAME))
+            val lastName = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_LASTNAME))
+            val contactNumber = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_CONTACTNUMBER))
+            val email = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_EMAIL))
+            val notes = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_NOTES))
+
+            contact = contacts(id, image, firstName, lastName, contactNumber, email, notes)
+        }
+        cursor.close()
+        db.close()
+        return contact
+    }
 
 }
