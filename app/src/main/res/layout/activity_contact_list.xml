@@ -71,7 +71,7 @@
         android:layout_below="@+id/callbooksearch"
         android:layout_width="match_parent"
         android:paddingTop="10dp"
-        android:background="@drawable/backgroud_two"
+        android:backgroundTintMode="screen"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
