@@ -12,11 +12,14 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.callbook.R
 
 class contactsAdapter(private var contacts: List<contacts>, private val context: Context) :
     RecyclerView.Adapter<contactsAdapter.contactViewHolder>() {
+
+        private val db: contactDatabaseHelper = contactDatabaseHelper(context)
 
     class contactViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.contactImage)
@@ -24,6 +27,7 @@ class contactsAdapter(private var contacts: List<contacts>, private val context:
         val lastNameTextView: TextView = itemView.findViewById(R.id.LastName)
         val contactTextView: TextView = itemView.findViewById(R.id.contactNumber)
         val profileView : Button = itemView.findViewById(R.id.ViewProfile)
+        val deletecontact : Button = itemView.findViewById(R.id.deleteContact)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): contactViewHolder {
@@ -44,6 +48,13 @@ class contactsAdapter(private var contacts: List<contacts>, private val context:
                 putExtra("contact_id", contacts[position].id) // Corrected accessing the ID of the contact
             }
             holder.itemView.context.startActivity(intent)
+        }
+
+        holder.deletecontact.setOnClickListener{
+            db.deleteContact(contact.id)
+            refreshContacts(db.getAllContacts())
+            Toast.makeText(holder.itemView.context, "Contact has been deleted",Toast.LENGTH_SHORT).show()
+
         }
 
 
