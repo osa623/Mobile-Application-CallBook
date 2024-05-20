@@ -73,9 +73,15 @@ class contactsAdapter(private var contacts: List<contacts>, private val context:
         notifyDataSetChanged()
     }
 
-    private fun byteArrayToBitmap(byteArray: ByteArray): Bitmap {
-        return BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
+    private fun byteArrayToBitmap(byteArray: ByteArray?): Bitmap? {
+        return if (byteArray != null && byteArray.isNotEmpty()) {
+            BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
+        } else {
+            null
+        }
     }
+
+
 
 
 }

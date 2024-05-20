@@ -1,11 +1,9 @@
 package com.example.callbook.contactListDatabaseConfigs
 
-import android.content.ClipData.Item
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import java.net.IDN
 
 // This is the Database helper for this database
 class contactDatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
@@ -108,6 +106,7 @@ class contactDatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABAS
         db.close()
         return contact
     }
+
 
     fun deleteContact(id : Int){
 
